@@ -6,10 +6,32 @@
 }
 
 .tour {
-  background: 
+  background:
     linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
     url('./assets/Images/tourbg.jpg');
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: cover;
 }
+/* .aboutbottom {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+} */
+
+/* .aboutbottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #DCFEFF8C;
+  background-image: url("./assets/Images/bg.svg"); 
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+} */
+ .aboutbottom{
+  background-color: #DCFEFF8C;
+  background-image: url('./assets/Images/bg.svg');
+  background-position: bottom center;
+ }
