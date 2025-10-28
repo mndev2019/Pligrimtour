@@ -1,5 +1,15 @@
-.banner{
-  background-image: url("./assets/Images/banner.jpg");
-  background-size: cover;
+.banner {
+  background-size: contain;
+  opacity: 0.15;
   background-position: center;
+  background-color: #F2F2F2;
+}
+
+.tour {
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url('./assets/Images/tourbg.jpg');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

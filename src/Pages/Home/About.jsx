@@ -1,5 +1,5 @@
 import React from "react";
-import aboutImg from "../../assets/Images/about.webp"; // replace with your actual image path
+import aboutImg from "../../assets/Images/bannerright.jpg"; // replace with your actual image path
 import logoIcon from "../../assets/Images/aboutplane.webp"; // replace with your orange circular logo
 
 const About = () => {
