@@ -35,3 +35,9 @@
   background-image: url('./assets/Images/bg.svg');
   background-position: bottom center;
  }
+ .testimonial{
+  background-image: url("./assets/Images/testimonialbg.jpeg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+ }

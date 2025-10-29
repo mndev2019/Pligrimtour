@@ -3,6 +3,9 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './App.css'
 import WebLayout from './Layout/WebLayout'
 import Home from './Pages/Home'
+import Contact from './Pages/Contact'
+
+import AboutUs from './Pages/AboutUs'
 
 
 function App() {
@@ -12,6 +15,8 @@ function App() {
         <Route path="/" element={<WebLayout />}>
 
           <Route index element={<Home />} />
+          <Route path='/contact' element={<Contact/>}/>
+          <Route path='/about' element={<AboutUs/>}/>
           
         </Route>
 
