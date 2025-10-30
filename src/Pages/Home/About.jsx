@@ -2,8 +2,10 @@ import React from "react";
 import aboutImg from "../../assets/Images/bannerright.jpg";
 import logoIcon from "../../assets/Images/aboutplane.webp";
 import { FaCheckCircle, FaMapMarkerAlt, FaTag } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   const features = [
     {
       icon: <FaTag className="text-white text-4xl" />,
@@ -28,7 +30,7 @@ const About = () => {
       <section className="py-16 md:py-20 bg-[#DCFEFF8C]">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-12">
           {/* Left Side Image Section */}
-          <div className="relative w-full md:w-1/2 flex justify-center">
+          <div className="relative w-full md:w-1/2 flex justify-center ">
             <img
               src={aboutImg}
               alt="about"
@@ -58,7 +60,7 @@ const About = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="w-full md:w-1/2 mt-16 md:mt-0 text-center md:text-left">
+          <div className="w-full md:w-1/2 mt-5 md:mt-0 text-center md:text-left">
             <h4 className="text-[#00bcd4] font-semibold uppercase mb-2">
               We Are Pilgrim Tour Planner
             </h4>
@@ -77,7 +79,7 @@ const About = () => {
               extraordinary memory.
             </p>
 
-            <button className="bg-[#00bcd4] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#e65700] transition-all duration-300 shadow-md">
+            <button className="bg-[#00bcd4] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#e65700] transition-all duration-300 shadow-md cursor-pointer" onClick={()=> navigate('/about')}>
               VIEW MORE
             </button>
           </div>
@@ -85,7 +87,7 @@ const About = () => {
       </section>
 
       {/* Features Section */}
-      <section className="aboutbottom py-10 bg-white">
+      <section className="aboutbottom md:pt-10 pb-10 bg-white">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 text-center md:text-left">
           {features.map((feature, index) => (
             <div

@@ -41,3 +41,6 @@
   background-position: top center;
   background-attachment: fixed;
  }
+/* .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+} */

@@ -1,6 +1,6 @@
 import React from "react";
 import img1 from "../../assets/Images/kedarnath.webp";
-import img2 from "../../assets/Images/kedarnath.webp";
+import img2 from "../../assets/Images/tungnath.jpeg";
 import img3 from "../../assets/Images/gallery.jpg";
 
 const Gallery = () => {
@@ -9,7 +9,7 @@ const Gallery = () => {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* Top Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
-                    <div className="relative">
+                    <div className="relative lg:block hidden">
                         <img
                             src={img3}
                             alt="Hot Air Balloons"
@@ -28,19 +28,19 @@ const Gallery = () => {
                             lacinia eget consectetur sed, convallis at tellus.
                         </p>
                         {/* 3 Image Gallery Row */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-5">
+                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 mt-5">
                             <div>
                                 <img
                                     src={img1}
                                     alt="Beach"
-                                    className="rounded-2xl w-full h-[300px] object-cover shadow-md hover:scale-105 transition-transform duration-500"
+                                    className="rounded-2xl w-full sm:h-[300px] h-[200px] object-cover shadow-md hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
                             <div>
                                 <img
                                     src={img2}
                                     alt="Temple"
-                                    className="rounded-2xl w-full h-[300px] object-cover shadow-md hover:scale-105 transition-transform duration-500"
+                                    className="rounded-2xl w-full sm:h-[300px] h-[200px] object-cover shadow-md hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
 

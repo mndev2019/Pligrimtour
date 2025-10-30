@@ -6,17 +6,17 @@ const Header = () => {
     <>
       {/* Top Header Bar */}
       <div className="w-full bg-[#071A2B] text-white text-sm fixed top-0 left-0 z-[60]">
-        <div className="flex justify-between items-center py-2 px-6 max-w-[1300px] mx-auto">
+        <div className="flex justify-between items-center lg:py-2 py-3 px-6  mx-auto">
           {/* Left Side */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center lg:gap-6 gap-2 lg:text-md md:text-sm text-[11px]">
             <span className="flex items-center gap-1">
-              Contact us at <span className="font-medium">+91 1234567890</span>
+              Contact us <span className="font-medium">+91 1234567890</span>
             </span>
 
-            <span className="text-[#00bcd4] text-lg">•</span>
-            <span className="cursor-pointer hover:text-[#00bcd4] transition">
+            {/* <span className="text-[#00bcd4] text-lg">•</span> */}
+            {/* <span className="cursor-pointer hover:text-[#00bcd4] transition">
               Travel Itinerary
-            </span>
+            </span> */}
 
             <span className="text-[#00bcd4] text-lg">•</span>
             <span>
@@ -31,7 +31,7 @@ const Header = () => {
           </div>
 
           {/* Right Side */}
-          <div className="flex items-center gap-4">
+          <div className="lg:flex hidden items-center gap-4">
             <a href="#" className="hover:text-[#00bcd4] transition">
               Twitter
             </a>

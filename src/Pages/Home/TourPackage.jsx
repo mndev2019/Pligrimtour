@@ -1,46 +1,57 @@
 import React from 'react'
-import packages from '../../assets/Images/newbanner.jpg'
 import { FaRegClock } from 'react-icons/fa'
 import { SlCalender } from 'react-icons/sl'
+import tungnath from '../../assets/Images/tungnath.jpeg'
+import badrinath from '../../assets/Images/badrinath.jpg'
+import kedarnath from '../../assets/Images/kedarnath.webp'
+import kashmir from '../../assets/Images/newbanner.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const TourPackage = () => {
+    const navigate = useNavigate();
     const packagedata = [
         {
-            image: packages,
+            image: tungnath,
             price: "21,999",
-            title: "Chardham Yatra Package"
+            title: "Tungnath Yatra Package",
+            link:'/tungnath-detail'
         },
         {
-            image: packages,
+            image: badrinath,
             price: "21,999",
-            title: "Chardham Yatra Package"
+            title: "Badrinath Yatra Package",
+             link:'/badrinath-detail'
         },
         {
-            image: packages,
+            image: kedarnath,
             price: "21,999",
-            title: "Chardham Yatra Package"
+            title: "Kedarnath Yatra Package",
+             link:'/kedarnath-detail'
+            
         },
         {
-            image: packages,
+            image: kashmir,
             price: "21,999",
-            title: "Chardham Yatra Package"
-        },
-    ]
+            title: "Kashmir  Package",
+             link:'/kashmir-detail'
+        }
+    ];
+
     return (
         <>
-            <section className="py-20 bg-gray-50 tour">
-                
+            <section className="lg:py-20 py-10 bg-gray-50 tour">
+
                 <div className="container mx-auto px-6 md:px-12 lg:px-20">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <div className="text-center md:mb-16 mb-10">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4">
                             Best Tour Packages <span className="text-[#00bcd4]">In India</span>
                         </h2>
-                        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+                        <p className="text-gray-500 md:text-lg text-md max-w-2xl mx-auto">
                             Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convgallis at tellus. Vestibulum ac diam sit.
                         </p>
                         <div className="mt-4 w-24 h-1 bg-[#00bcd4] mx-auto rounded-full"></div>
                     </div>
-                    <div className="grid grid-cols-4 gap-4">
+                    <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">
                         {packagedata.map((packages) => (
                             <>
                                 <div className="col-span-1">
@@ -92,10 +103,12 @@ const TourPackage = () => {
 
                                                 {/* Buttons */}
                                                 <div className="w-full p-2 absolute flex gap-2 bottom-0 left-0">
-                                                    <button className="border border-[#00bcd4] text-[#00bcd4] text-xs uppercase w-1/2 hover:bg-[#00bcd4] hover:text-white mt-4 py-2 rounded-s-lg">
+                                                    <button className="border border-[#00bcd4] text-[#00bcd4] text-xs uppercase w-1/2 hover:bg-[#00bcd4] hover:text-white mt-4 py-2 rounded-s-lg"
+                                                    onClick={()=> navigate(packages.link)}
+                                                    >
                                                         View Details
                                                     </button>
-                                                    <button className="bg-[#00bcd4] text-xs uppercase w-1/2 text-white mt-4 py-2 rounded-e-lg">
+                                                    <button className="bg-[#00bcd4] text-xs uppercase w-1/2 text-white mt-4 py-2 rounded-e-lg" onClick={()=> navigate('/contact')}>
                                                         Enquire Now
                                                     </button>
                                                 </div>

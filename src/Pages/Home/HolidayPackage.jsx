@@ -1,25 +1,32 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import image from "../../assets/Images/about.webp"; // replace with your real image path
+
+import kashmir from '../../assets/Images/newbanner.jpg'
+import kedarnath from '../../assets/Images/kedarnath.webp'
+import tungnath from '../../assets/Images/tungnath.jpeg'
+import badrinath from '../../assets/Images/badrinath.jpg'
+import yamunotri from '../../assets/Images/yamunotri.jpg'
+import { useNavigate } from "react-router-dom";
 
 const destinations = [
-  { name: "Kashmir", tours: "02 Tour", img: image },
-  { name: "Kedarnath", tours: "04 Tour", img: image },
-  { name: "Tungnath", tours: "03 Tour", img: image },
-  { name: "Badrinath", tours: "02 Tour", img: image },
-  { name: "Yamunotri", tours: "05 Tour", img: image },
+  { name: "Kashmir", tours: "02 Tour", img: kashmir , link:"/kashmir-detail" },
+  { name: "Kedarnath", tours: "04 Tour", img: kedarnath, link: '/kedarnath-detail' },
+  { name: "Tungnath", tours: "03 Tour", img: tungnath, link: '/tungnath-detail' },
+  { name: "Badrinath", tours: "02 Tour", img: badrinath, link:'/badrinath-detail' },
+  { name: "Yamunotri", tours: "05 Tour", img: yamunotri, link:'/yamunotri-detail'},
 ];
 
 const HolidayPackage = () => {
+  const navigate = useNavigate();
   return (
-    <section className="py-20 bg-[#f9ffff]" id="holiday-packages">
+    <section className="lg:py-20 py-10 bg-[#f9ffff]" id="holiday-packages">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center md:mb-16 mb-10">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
             Popular <span className="text-[#00bcd4]">Holiday Packages</span>
           </h2>
-          <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 md:text-lg text-md max-w-2xl mx-auto">
             Explore India’s most spiritual and breathtaking destinations
           </p>
           <div className="mt-4 w-24 h-1 bg-[#00bcd4] mx-auto rounded-full"></div>
@@ -31,6 +38,7 @@ const HolidayPackage = () => {
             <div
               key={index}
               className="relative rounded-3xl overflow-hidden shadow-md group cursor-pointer transition-all duration-500 hover:shadow-xl"
+              onClick={() => navigate(place.link)}
             >
               {/* Image */}
               <img

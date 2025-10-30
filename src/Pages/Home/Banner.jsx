@@ -3,8 +3,10 @@ import { FaPhoneAlt, FaAnchor } from "react-icons/fa";
 import bannerImg from "../../assets/Images/newbanner.jpg";
 import img1 from "../../assets/Images/kedarnath.webp";
 import img2 from "../../assets/Images/bannerright.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="relative min-h-[90vh] md:h-screen flex items-center bg-cover bg-center overflow-hidden"
@@ -16,7 +18,7 @@ const Banner = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between text-white">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-center justify-between text-white top-[30px]">
         {/* LEFT CONTENT */}
         <div className="w-full lg:w-1/2 text-left">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
@@ -45,7 +47,7 @@ const Banner = () => {
             </div>
 
             {/* Button */}
-            <button className="bg-[#00bcd4] text-white font-semibold py-2.5 sm:py-3 px-8 sm:px-10 rounded-full hover:bg-[#009fb3] transition-all duration-300 shadow-lg hover:shadow-[#00bcd4]/50 text-sm sm:text-base">
+            <button onClick={()=> navigate('/contact')} className="cursor-pointer bg-[#00bcd4] text-white font-semibold py-2.5 sm:py-3 px-8 sm:px-10 rounded-full hover:bg-[#009fb3] transition-all duration-300 shadow-lg hover:shadow-[#00bcd4]/50 text-sm sm:text-base">
               Book Now
             </button>
           </div>

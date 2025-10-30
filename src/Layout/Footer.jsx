@@ -1,11 +1,12 @@
 import React from "react";
-import image1 from '../assets/Images/about.webp'
-import image2 from '../assets/Images/banner.jpg'
-import image3 from '../assets/Images/kedarnath.webp'
-import image4 from '../assets/Images/kedarnath.webp'
-import image5 from '../assets/Images/newbanner.jpg'
+import image1 from '../assets/Images/newbanner.jpg'
+import image2 from '../assets/Images/kedarnath.webp'
+import image3 from '../assets/Images/tungnath.jpeg'
+import image4 from '../assets/Images/badrinath.jpg'
+import image5 from '../assets/Images/yamunotri.jpg'
 import image6 from '../assets/Images/gallery.jpg'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <footer className="bg-[#f8f8f8] text-gray-800 py-10 px-6 md:px-16">
@@ -55,11 +56,11 @@ const Footer = () => {
                         <span className="absolute left-0 bottom-[-4px] w-12 h-[2px] bg-[#00bcd4]"></span>
                     </h2>
                     <ul className="space-y-2 text-md font-semibold">
-                        <li><a href="#" className="hover:text-[#00bcd4]">Home</a></li>
-                        <li><a href="#" className="hover:text-[#00bcd4]">About Us</a></li>
-                        <li><a href="#" className="hover:text-[#00bcd4]">Domestic</a></li>
+                        <li className="hover:text-[#00bcd4]"><Link to="/">Home</Link></li>
+                        <li className="hover:text-[#00bcd4]"><Link to="/about">About Us</Link></li>
+                        <li className="hover:text-[#00bcd4]"><Link to="/our-package">Our Package</Link></li>
 
-                        <li><a href="#" className="hover:text-[#00bcd4]">Contact Us</a></li>
+                        <li className="hover:text-[#00bcd4]"><Link to="/contact">Contact Us</Link></li>
                     </ul>
                 </div>
 
