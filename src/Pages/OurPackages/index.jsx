@@ -1,18 +1,20 @@
 import React from "react";
 import kashmir from "../../assets/Images/newbanner.jpg";
-import kedarnath from "../../assets/Images/kedarnath.webp";
+import kedarnath from "../../assets/Images/kedarnath.jpg";
 import tungnath from "../../assets/Images/tungnath.jpeg";
 import badrinath from "../../assets/Images/badrinath.jpg";
 import yamunotri from "../../assets/Images/yamunotri.jpg";
 import InnerBanner from "../../Component/InnerBanner";
+import gangotri from '../../assets/Images/gangotri.jpg'
 import { useNavigate } from "react-router-dom";
 
 const destinations = [
-  { name: "Kashmir", tours: "02 Tour", img: kashmir , link:"/kashmir-detail" },
+  { name: "Mussoorie", tours: "02 Tour", img: kashmir , link:"/kashmir-detail" },
   { name: "Kedarnath", tours: "04 Tour", img: kedarnath, link: '/kedarnath-detail' },
   { name: "Tungnath", tours: "03 Tour", img: tungnath, link: '/tungnath-detail' },
   { name: "Badrinath", tours: "02 Tour", img: badrinath, link:'/badrinath-detail' },
   { name: "Yamunotri", tours: "05 Tour", img: yamunotri, link:'/yamunotri-detail'},
+   { name: "Gangotri", tours: "05 Tour", img: gangotri, link:'/gangotri-detail'},
 ];
 
 const OurPackages = () => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-// import logo from "../assets/Image/newlogocolored.png";
+import logo from "../assets/Images/logo.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -25,14 +25,14 @@ const Navbar = () => {
   return (
     <nav className="w-full bg-white shadow-md fixed lg:top-[40px] top-[50px] left-0 z-[50]">
       {/* 👆 top-[40px] pushes navbar below header (since header ≈ 40px tall) */}
-      <div className="max-w-[1300px] mx-auto flex justify-between items-center px-6 lg:px-10 py-3">
+      <div className="max-w-[1300px] mx-auto flex justify-between items-center px-6 lg:px-10 py-2">
         {/* Logo */}
         <NavLink to="/">
-          {/* <img
+          <img
             src={logo}
             alt="Wandering Tourplanner"
-            className="h-[45px] lg:h-[55px] object-contain"
-          /> */}
+            className="h-[45px] lg:h-[70px] object-contain"
+          />
         </NavLink>
 
         {/* Desktop Menu */}

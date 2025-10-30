@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import { FiPlus } from "react-icons/fi";
 import { LuMinus } from "react-icons/lu";
-import InnerBanner from '../../Component/InnerBanner';
+
 import BookForm from '../../Component/BookForm';
+import hotel1 from '../../assets/Images/hotel1.jpg'
+import hotel2 from '../../assets/Images/hotel2.jpg'
+import hotel3 from '../../assets/Images/hotel3.jpg'
+import hotel4 from '../../assets/Images/hotel4.jpg'
+import PackageDetailBanner from '../../Component/PackageDetailBanner';
+import badrinathBanner from '../../assets/Images/badrinath.jpg'
 
 const BadrinathDetail = () => {
     const faqdata = [
@@ -29,7 +35,7 @@ const BadrinathDetail = () => {
 
     return (
         <>
-            <InnerBanner title="Badrinath Tour Package" />
+            <PackageDetailBanner title="Badrinath Tour Package" image={badrinathBanner}  />
             <section className='py-10 bg-gray-100 lg:px-10 px-5'>
                 <div className='grid lg:grid-cols-12 grid-cols-1 gap-4'>
                     <div className='lg:col-span-8 col-span-1 lg:order-1 order-2'>
@@ -41,7 +47,7 @@ const BadrinathDetail = () => {
                                 Badrinath, one of the sacred Char Dham pilgrimage sites, is located in the Chamoli district of Uttarakhand. Dedicated to Lord Vishnu, the Badrinath Temple stands at an elevation of 3,133 meters along the banks of the Alaknanda River. Surrounded by the Nar and Narayan mountain ranges, this holy destination offers a spiritually uplifting experience amid nature’s pristine beauty.
                             </p>
 
-                             <div className="flex items-center w-full gap-3 mt-2 overflow-x-auto scrollbar-hide">
+                            <div className="flex items-center w-full gap-3 mt-2 overflow-x-auto scrollbar-hide">
                                 {['Itinerary', 'Inclusions/Exclusions', 'Price'].map((itm, index) => (
                                     <button
                                         key={index}
@@ -56,29 +62,89 @@ const BadrinathDetail = () => {
 
                             {/* Itinerary / FAQ Section */}
                             {active === "Itinerary" && (
-                                <div className="mt-5 space-y-3">
-                                    {faqdata.map((item, index) => (
-                                        <div key={index} className="border border-gray-200 rounded-lg shadow-sm">
-                                            <button
-                                                className="w-full flex justify-between items-center md:p-2 p-3 text-left font-medium bg-gray-100 hover:bg-[#00bcd4] transition"
-                                                onClick={() => toggleAccordion(index)}
-                                            >
-                                                <span className="text-gray-800 md:text-[16px] text-[14px]">{item.question}</span>
-                                                <span className="text-gray-600 bg-[#00bcd4] p-1 rounded-full">
-                                                    {activeIndex === index ? (
-                                                        <LuMinus size={20} className="text-white" />
-                                                    ) : (
-                                                        <FiPlus size={20} className="text-white" />
-                                                    )}
-                                                </span>
-                                            </button>
-                                            {activeIndex === index && (
-                                                <div className="p-4 text-gray-700 bg-white border-t md:text-[16px] text-[14px]">
-                                                    {item.answer}
+                                <div className="mt-5 space-y-6">
+                                    {/* Itinerary Section */}
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-800 mb-3">Trip Itinerary</h3>
+                                        <div className="space-y-4">
+                                            {/* Day 1 */}
+                                            <div className="border border-gray-200 rounded-lg shadow-sm bg-white">
+                                                <div className="bg-[#00bcd4] text-white font-medium p-3 rounded-t-lg">
+                                                    Day 1 – Arrival & City Exploration
                                                 </div>
+                                                <div className="p-4 text-gray-700">
+                                                    <ul className="list-disc pl-5 space-y-1">
+                                                        <li>Arrival at destination and hotel check-in.</li>
+                                                        <li>Welcome drink and short briefing.</li>
+                                                        <li>Explore the nearby local market and dinner at a traditional restaurant.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            {/* Day 2 */}
+                                            <div className="border border-gray-200 rounded-lg shadow-sm bg-white">
+                                                <div className="bg-[#00bcd4] text-white font-medium p-3 rounded-t-lg">
+                                                    Day 2 – Sightseeing & Adventure
+                                                </div>
+                                                <div className="p-4 text-gray-700">
+                                                    <ul className="list-disc pl-5 space-y-1">
+                                                        <li>Breakfast at the hotel.</li>
+                                                        <li>Visit popular tourist attractions and monuments.</li>
+                                                        <li>Evening leisure time with optional activities.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            {/* Day 3 */}
+                                            <div className="border border-gray-200 rounded-lg shadow-sm bg-white">
+                                                <div className="bg-[#00bcd4] text-white font-medium p-3 rounded-t-lg">
+                                                    Day 3 – Departure
+                                                </div>
+                                                <div className="p-4 text-gray-700">
+                                                    <ul className="list-disc pl-5 space-y-1">
+                                                        <li>Breakfast and check-out.</li>
+                                                        <li>Transfer to the airport/train station.</li>
+                                                        <li>Trip concludes with happy memories.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* FAQ Section */}
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-gray-800 mb-3">FAQs</h3>
+                                        <div className="space-y-3">
+                                            {faqdata.length > 0 ? (
+                                                faqdata.map((item, index) => (
+                                                    <div key={index} className="border border-gray-200 rounded-lg shadow-sm">
+                                                        <button
+                                                            className="w-full flex justify-between items-center md:p-2 p-3 text-left font-medium bg-gray-100 hover:bg-[#00bcd4] transition"
+                                                            onClick={() => toggleAccordion(index)}
+                                                        >
+                                                            <span className="text-gray-800 md:text-[16px] text-[14px]">
+                                                                {item.question}
+                                                            </span>
+                                                            <span className="text-gray-600 bg-[#00bcd4] p-1 rounded-full">
+                                                                {activeIndex === index ? (
+                                                                    <LuMinus size={20} className="text-white" />
+                                                                ) : (
+                                                                    <FiPlus size={20} className="text-white" />
+                                                                )}
+                                                            </span>
+                                                        </button>
+                                                        {activeIndex === index && (
+                                                            <div className="p-4 text-gray-700 bg-white border-t md:text-[16px] text-[14px]">
+                                                                {item.answer}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="text-center text-gray-600">No FAQs available.</p>
                                             )}
                                         </div>
-                                    ))}
+                                    </div>
                                 </div>
                             )}
 
@@ -140,13 +206,34 @@ const BadrinathDetail = () => {
                                         </button>
                                     </div>
                                 </div>
-                            )}
+                            )}    {/* Hotel Rooms Gallery Section */}
+                            <div className="mt-10">
+                                <h3 className="text-xl font-semibold text-gray-800 mb-5">
+                                    Hotel Rooms Gallery
+                                </h3>
+                                <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+                                    {[hotel1, hotel2, hotel3, hotel4].map((src, index) => (
+                                        <div
+                                            key={index}
+                                            className="overflow-hidden rounded-lg shadow-md bg-white hover:shadow-lg transition duration-300"
+                                        >
+                                            <img
+                                                src={src}
+                                                alt={`Hotel Room ${index + 1}`}
+                                                className="w-full h-56 object-cover transform hover:scale-105 transition duration-500"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Sidebar Booking Form */}
                     <div className="lg:col-span-4 col-span-1 lg:order-2 order-1 h-full">
-                        <BookForm />
+                        <div className="sticky top-24">
+                            <BookForm />
+                        </div>
                     </div>
                 </div>
             </section>

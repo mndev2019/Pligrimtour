@@ -1,26 +1,25 @@
 import React from "react";
 import image1 from '../assets/Images/newbanner.jpg'
-import image2 from '../assets/Images/kedarnath.webp'
+import image2 from '../assets/Images/kedarnath.jpg'
 import image3 from '../assets/Images/tungnath.jpeg'
 import image4 from '../assets/Images/badrinath.jpg'
 import image5 from '../assets/Images/yamunotri.jpg'
 import image6 from '../assets/Images/gallery.jpg'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import logo from '../assets/Images/logo.png'
 const Footer = () => {
     return (
         <footer className="bg-[#f8f8f8] text-gray-800 py-10 px-6 md:px-16">
             <div className="grid md:grid-cols-3 gap-10">
                 {/* Logo + Description */}
                 <div>
-                    {/* <img
-            src="/logo.png"
-            alt="Wandering Tour Planner"
-            className="w-48 mb-4"
-          /> */}
-                    <h2 className="text-lg">
-                        LOGO
-                    </h2>
+                    <img
+                        src={logo}
+                        alt="Wandering Tour Planner"
+                        className="w-30 mb-4"
+                    />
+
                     <p className="text-md leading-relaxed font-semibold">
                         Crafting bespoke  international journeys. Our motto:
                         client satisfaction drives every adventure. Your unforgettable voyage
@@ -88,7 +87,7 @@ const Footer = () => {
             <div className="border-t border-gray-300 mt-10 pt-4 text-center text-sm">
                 <p>
                     © 2025 <span className="font-semibold">Pilgrim Tour Planner</span> |
-                    Powered by <a href="#" className="text-[#00bcd4] hover:underline">Ramot It Services</a>
+                    Powered by <a href="https://ramot.cloud/" target="_blank" className="text-[#00bcd4] hover:underline">Ramot It Solutions Pvt Ltd</a>
                 </p>
             </div>
         </footer>

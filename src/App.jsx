@@ -12,6 +12,7 @@ import TungnathDetail from './Pages/PackageDetail/TungnathDetail'
 import BadrinathDetail from './Pages/PackageDetail/BadrinathDetail'
 import YamunotriDetail from './Pages/PackageDetail/YamunotriDetail'
 import KashmirDetail from './Pages/PackageDetail/KashmirDetail'
+import GangotriDetail from './Pages/PackageDetail/GangotriDetail'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/badrinath-detail' element={<BadrinathDetail />} />
           <Route path='/yamunotri-detail' element={<YamunotriDetail />} />
           <Route path='/kashmir-detail' element={<KashmirDetail />} />
+          <Route path='/gangotri-detail' element={<GangotriDetail/>}/>
 
         </Route>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaPhoneAlt, FaAnchor } from "react-icons/fa";
 import bannerImg from "../../assets/Images/newbanner.jpg";
-import img1 from "../../assets/Images/kedarnath.webp";
+import img1 from "../../assets/Images/kedarnath.jpg";
 import img2 from "../../assets/Images/bannerright.jpg";
 import { useNavigate } from "react-router-dom";
 
@@ -61,6 +61,7 @@ const Banner = () => {
               src={img1}
               alt="Travel Destination 1"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+               onClick={()=> navigate('/kedarnath-detail')}
             />
           </div>
 
@@ -70,6 +71,7 @@ const Banner = () => {
               src={img2}
               alt="Travel Destination 2"
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              onClick={()=> navigate('/kashmir-detail')}
             />
           </div>
         </div>
