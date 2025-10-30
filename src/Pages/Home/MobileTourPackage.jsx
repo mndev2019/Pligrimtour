@@ -13,7 +13,7 @@ import gangotri from '../../assets/Images/gangotri.jpg'; // ✅ add Gangotri ima
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const TourPackage = () => {
+const MobileTourPackage = () => {
   const navigate = useNavigate();
 
   const packagedata = [
@@ -55,27 +55,14 @@ const TourPackage = () => {
     autoplay: true,
     autoplaySpeed: 2500,
     speed: 600,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 3 }
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 2 }
-      },
-      {
-        breakpoint: 480,
-        settings: { slidesToShow: 1 }
-      }
-    ]
+    
   };
 
   return (
-    <section className="lg:py-20 py-10 bg-gray-50 tour md:block hidden">
+    <section className="lg:py-20 py-10 bg-gray-50 tour md:hidden block">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Heading */}
         <div className="text-center md:mb-16 mb-10">
@@ -149,4 +136,4 @@ const TourPackage = () => {
   );
 };
 
-export default TourPackage;
+export default MobileTourPackage;

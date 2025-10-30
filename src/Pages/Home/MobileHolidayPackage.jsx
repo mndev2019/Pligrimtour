@@ -19,7 +19,7 @@ const destinations = [
   { name: "Gangotri", tours: "03 Tour", img: gangotri, link: "/gangotri-detail" }, // ✅ Added new destination
 ];
 
-const HolidayPackage = () => {
+const MobileHolidayPackage = () => {
   const navigate = useNavigate();
 
   const settings = {
@@ -27,32 +27,15 @@ const HolidayPackage = () => {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2500,
-    slidesToShow: 5,
+    slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1280, // lg
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 1024, // md
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768, // sm
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 480, // mobile
-        settings: { slidesToShow: 1 },
-      },
-    ],
+    
   };
 
   return (
-    <section className="lg:py-20 py-10 bg-[#f9ffff] md:block hidden" id="holiday-packages">
+    <section className="lg:py-20 py-10 bg-[#f9ffff] md:hidden block" id="holiday-packages">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Heading */}
         <div className="text-center md:mb-16 mb-10">
@@ -101,4 +84,4 @@ const HolidayPackage = () => {
   );
 };
 
-export default HolidayPackage;
+export default MobileHolidayPackage;
