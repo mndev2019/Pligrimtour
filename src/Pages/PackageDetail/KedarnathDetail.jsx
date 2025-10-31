@@ -7,7 +7,7 @@ import hotel1 from '../../assets/Images/hotel1.jpg'
 import hotel2 from '../../assets/Images/hotel2.jpg'
 import hotel3 from '../../assets/Images/hotel3.jpg'
 import hotel4 from '../../assets/Images/hotel4.jpg'
-import kedarnathbanner from '../../assets/Images/kedarnath.jpg'
+import kedarnathbanner from '../../assets/Images/kedarnathnew.jfif'
 import PackageDetailBanner from '../../Component/PackageDetailBanner';
 
 const KedarnathDetail = () => {
