@@ -1,10 +1,10 @@
 import React from "react";
 import image1 from '../assets/Images/newbanner.jpg'
-import image2 from '../assets/Images/kedarnath.jpg'
+import image2 from '../assets/Images/kedarnathnew.jfif'
 import image3 from '../assets/Images/tungnath.jpeg'
-import image4 from '../assets/Images/badrinath.jpg'
+import image4 from '../assets/Images/badrinathnew.jfif'
 import image5 from '../assets/Images/yamunotri.jpg'
-import image6 from '../assets/Images/gallery.jpg'
+import image6 from '../assets/Images/gangotri.jpg'
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import logo from '../assets/Images/logo.png'
@@ -21,9 +21,9 @@ const Footer = () => {
                     />
 
                     <p className="text-md leading-relaxed font-semibold">
-                        Crafting bespoke  international journeys. Our motto:
-                        client satisfaction drives every adventure. Your unforgettable voyage
-                        starts here.
+                        Crafting meaningful domestic pilgrim journeys across India. Our mission:
+                        providing comfort, trust, and devotion in every tour. Your sacred experience
+                        begins with us.
                     </p>
                     <div className="flex gap-3 mt-4">
                         <a

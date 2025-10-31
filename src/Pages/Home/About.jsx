@@ -1,36 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import aboutImg from "../../assets/Images/bannerright.jpg";
 import logoIcon from "../../assets/Images/aboutplane.webp";
 import { FaCheckCircle, FaMapMarkerAlt, FaTag } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    AOS.init({ duration: 900});
+  }, []);
   const features = [
     {
       icon: <FaTag className="text-white text-4xl" />,
       title: "Best Price Guarantee",
-      text: "There are many variations of passages of Lorem Ipsum available.",
+      text: "Affordable pilgrimage packages with transparent pricing and no hidden charges.",
     },
     {
       icon: <FaCheckCircle className="text-white text-4xl" />,
-      title: "Trusted Service",
-      text: "There are many variations of passages of Lorem Ipsum available.",
+      title: "Trusted Pilgrim Service",
+      text: "Reliable arrangements for darshan, accommodations, and spiritual guidance.",
     },
     {
       icon: <FaMapMarkerAlt className="text-white text-4xl" />,
-      title: "Worldwide Coverage",
-      text: "There are many variations of passages of Lorem Ipsum available.",
+      title: "Pan-India Pilgrim Destinations",
+      text: "Explore top holy sites across India including Chardham, Jyotirlinga, and more.",
     },
   ];
+
 
   return (
     <>
       {/* Main About Section */}
-      <section className="py-16 md:py-20 bg-[#DCFEFF8C]">
+      <section className="py-16 md:py-20 bg-[#DCFEFF8C] overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 md:px-12 lg:px-20 flex flex-col md:flex-row items-center gap-12">
           {/* Left Side Image Section */}
-          <div className="relative w-full md:w-1/2 flex justify-center ">
+          <div className="relative w-full md:w-1/2 flex justify-center " data-aos="zoom-out-right">
             <img
               src={aboutImg}
               alt="about"
@@ -60,7 +66,7 @@ const About = () => {
           </div>
 
           {/* Right Side Content */}
-          <div className="w-full md:w-1/2 mt-5 md:mt-0 text-center md:text-left">
+          <div className="w-full md:w-1/2 mt-5 md:mt-0 text-center md:text-left" data-aos="fade-left">
             <h4 className="text-[#00bcd4] font-semibold uppercase mb-2">
               We Are Pilgrim Tour Planner
             </h4>
@@ -79,7 +85,7 @@ const About = () => {
               extraordinary memory.
             </p>
 
-            <button className="bg-[#00bcd4] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#e65700] transition-all duration-300 shadow-md cursor-pointer" onClick={()=> navigate('/about')}>
+            <button className="bg-[#00bcd4] text-white font-semibold py-3 px-8 rounded-md hover:bg-[#e65700] transition-all duration-300 shadow-md cursor-pointer" onClick={() => navigate('/about')}>
               VIEW MORE
             </button>
           </div>
@@ -88,11 +94,12 @@ const About = () => {
 
       {/* Features Section */}
       <section className="aboutbottom md:pt-10 pb-10 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 text-center md:text-left">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 text-center md:text-left">
           {features.map((feature, index) => (
             <div
               key={index}
               className="flex flex-col md:flex-row items-center md:items-start gap-5"
+              data-aos="flip-left"
             >
               <div className="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24">
                 <div className="absolute inset-0 rounded-full bg-[#ff6600]" />

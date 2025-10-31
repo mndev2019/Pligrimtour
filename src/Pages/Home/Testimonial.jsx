@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import { FaStar } from 'react-icons/fa';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonial = () => {
+  
+  useEffect(() => {
+    AOS.init({ duration: 900 });
+  }, []);
   const testimonials = [
     {
       name: 'Aarav Sharma',
@@ -52,13 +58,13 @@ const Testimonial = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Left Section */}
-        <div className="text-white text-center md:text-left space-y-6">
+        <div className="text-white text-center md:text-left space-y-6"  data-aos="flip-left">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
             What Our <span className="text-[#00bcd4]">Clients Say</span>
           </h2>
           <p className="text-gray-200 text-sm sm:text-base max-w-md mx-auto md:mx-0">
-            We’ve helped thousands of travelers explore breathtaking destinations around the world.
-            Here’s what they have to say about their experiences.
+            Thousands of pilgrims have trusted us to plan their sacred yatra with comfort and devotion.
+            Hear their heartfelt experiences from the journey.
           </p>
           <div className="w-20 sm:w-24 h-1 bg-[#00bcd4] mx-auto md:mx-0 rounded-full"></div>
         </div>

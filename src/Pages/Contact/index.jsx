@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InnerBanner from "../../Component/InnerBanner";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaPlane, FaUmbrellaBeach, FaMountain } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
+    useEffect(() => {
+        AOS.init({ duration: 900 });
+    }, []);
     return (
         <>
             <InnerBanner title="Contact Us" />
@@ -14,7 +19,7 @@ const Contact = () => {
 
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 z-10">
                     {/* Heading */}
-                    <div className="text-center mb-16">
+                    <div className="text-center mb-16" data-aos="flip-left">
                         <h2 className="lg:text-5xl md:text-4xl text-3xl font-extrabold mb-4 tracking-tight">
                             Let’s <span className="text-[#00bcd4]">Connect</span>
                         </h2>
@@ -92,6 +97,7 @@ const Contact = () => {
                                     <label className="block text-gray-300 mb-2">Full Name</label>
                                     <input
                                         type="text"
+                                        required
                                         placeholder="Enter your name"
                                         className="w-full bg-transparent border border-gray-500 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] placeholder-gray-400"
                                     />
@@ -101,6 +107,7 @@ const Contact = () => {
                                     <label className="block text-gray-300 mb-2">Email</label>
                                     <input
                                         type="email"
+                                        required
                                         placeholder="Enter your email"
                                         className="w-full bg-transparent border border-gray-500 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] placeholder-gray-400"
                                     />
@@ -110,6 +117,7 @@ const Contact = () => {
                                     <label className="block text-gray-300 mb-2">Message</label>
                                     <textarea
                                         rows="4"
+                                        required
                                         placeholder="Tell us about your travel plans..."
                                         className="w-full bg-transparent border border-gray-500 text-white rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-[#00bcd4] placeholder-gray-400"
                                     ></textarea>

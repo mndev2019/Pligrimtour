@@ -1,14 +1,16 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useEffect } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
-import kashmir from '../../assets/Images/newbanner.jpg';
-import kedarnath from '../../assets/Images/kedarnath.jpg';
-import tungnath from '../../assets/Images/tungnath.jpeg';
-import badrinath from '../../assets/Images/badrinath.jpg';
-import yamunotri from '../../assets/Images/yamunotri.jpg';
-import gangotri from '../../assets/Images/gangotri.jpg'; // ✅ Add Gangotri image
+import kashmir from "../../assets/Images/newbanner.jpg";
+import kedarnath from "../../assets/Images/kedarnathnew.jfif";
+import tungnath from "../../assets/Images/tungnath.jpeg";
+import badrinath from "../../assets/Images/badrinathnew.jfif";
+import yamunotri from "../../assets/Images/yamunotri.jpg";
+import gangotri from "../../assets/Images/gangotri.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 
 const destinations = [
   { name: "Mussoorie", tours: "02 Tour", img: kashmir, link: "/kashmir-detail" },
@@ -16,86 +18,78 @@ const destinations = [
   { name: "Tungnath", tours: "03 Tour", img: tungnath, link: "/tungnath-detail" },
   { name: "Badrinath", tours: "02 Tour", img: badrinath, link: "/badrinath-detail" },
   { name: "Yamunotri", tours: "05 Tour", img: yamunotri, link: "/yamunotri-detail" },
-  { name: "Gangotri", tours: "03 Tour", img: gangotri, link: "/gangotri-detail" }, // ✅ Added new destination
+  { name: "Gangotri", tours: "03 Tour", img: gangotri, link: "/gangotri-detail" },
 ];
 
 const HolidayPackage = () => {
   const navigate = useNavigate();
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: true,
-    responsive: [
-      {
-        breakpoint: 1280, // lg
-        settings: { slidesToShow: 4 },
-      },
-      {
-        breakpoint: 1024, // md
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 768, // sm
-        settings: { slidesToShow: 2 },
-      },
-      {
-        breakpoint: 480, // mobile
-        settings: { slidesToShow: 1 },
-      },
-    ],
-  };
+  useEffect(() => {
+    AOS.init({ duration: 900});
+  }, []);
 
   return (
-    <section className="lg:py-20 py-10 bg-[#f9ffff] md:block hidden" id="holiday-packages">
+    <section className="lg:py-20 py-12 bg-[#f9ffff]" id="holiday-packages">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
+
         {/* Heading */}
-        <div className="text-center md:mb-16 mb-10">
+        <div className="text-center md:mb-16 mb-10" data-aos="flip-left">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Popular <span className="text-[#00bcd4]">Holiday Packages</span>
+            Popular <span className="text-[#00bcd4]">Pilgrim Packages</span>
           </h2>
-          <p className="text-gray-500 md:text-lg text-md max-w-2xl mx-auto">
-            Explore India’s most spiritual and breathtaking destinations
+          <p className="text-gray-500 md:text-lg max-w-2xl mx-auto">
+            Explore India’s most spiritual and breathtaking destinations.
           </p>
           <div className="mt-4 w-24 h-1 bg-[#00bcd4] mx-auto rounded-full"></div>
         </div>
 
-        {/* Destination Slider */}
-        <Slider {...settings}>
+        {/* TWO CARDS EACH ROW */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {destinations.map((place, index) => (
-            <div key={index} className="px-3">
-              <div
-                className="relative rounded-3xl overflow-hidden shadow-md group cursor-pointer transition-all duration-500 hover:shadow-xl"
-                onClick={() => navigate(place.link)}
-              >
+            <div
+              key={index}
+              onClick={() => navigate(place.link)}
+              className="group bg-white rounded-3xl shadow-md hover:shadow-xl cursor-pointer 
+                         transition-all duration-500 p-6 relative overflow-hidden border border-transparent 
+                         hover:border-[#00bcd4]/40"
+                         data-aos="zoom-in"
+            >
+              {/* Background Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00bcd425] to-transparent opacity-0 
+                              group-hover:opacity-100 blur-xl transition-all duration-700"></div>
+
+              <div className="relative flex flex-col md:flex-row items-center gap-7">
+
                 {/* Image */}
                 <img
                   src={place.img}
                   alt={place.name}
-                  className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full md:w-70 h-60 rounded-2xl object-cover 
+                             transition-all duration-500 group-hover:scale-105 group-hover:rotate-1"
                 />
 
-                {/* Info box */}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white px-5 py-3 rounded-2xl shadow-md w-[85%] flex items-center justify-between">
-                  <div>
-                    <h3 className="text-gray-900 font-semibold text-lg">
-                      {place.name}
-                    </h3>
-                    <p className="text-gray-400 text-sm">{place.tours}</p>
-                  </div>
-                  <div className="bg-[#00bcd4] w-8 h-8 flex items-center justify-center rounded-full">
-                    <FiArrowUpRight className="text-white text-lg" />
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                    {place.name}
+                  </h3>
+
+                  <p className="text-gray-500 text-sm mt-1">{place.tours}</p>
+
+                  <p className="text-gray-600 mt-4 max-w-sm leading-relaxed">
+                    Discover the divine beauty and peaceful surroundings of {place.name}.
+                  </p>
+
+                  {/* Button */}
+                  <div className="mt-5 inline-flex items-center gap-2 text-[#00bcd4] text-lg font-medium 
+                                  transition-all duration-300 group-hover:gap-3">
+                    Explore Now <FiArrowUpRight className="text-xl" />
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </Slider>
+        </div>
+
       </div>
     </section>
   );

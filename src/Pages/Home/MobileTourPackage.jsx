@@ -58,7 +58,7 @@ const MobileTourPackage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    
+
   };
 
   return (
@@ -67,11 +67,10 @@ const MobileTourPackage = () => {
         {/* Section Heading */}
         <div className="text-center md:mb-16 mb-10">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Best Tour Packages <span className="text-[#00bcd4]">In India</span>
+            Best Pilgrim Tour  <span className="text-[#00bcd4]">Packages In India</span>
           </h2>
           <p className="text-gray-500 md:text-lg text-md max-w-2xl mx-auto">
-            Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-            lacinia eget consectetur sed, convallis at tellus.
+            Discover thoughtfully crafted pilgrim tour packages that let you explore India’s most sacred destinations with comfort and ease.
           </p>
           <div className="mt-4 w-24 h-1 bg-[#00bcd4] mx-auto rounded-full"></div>
         </div>

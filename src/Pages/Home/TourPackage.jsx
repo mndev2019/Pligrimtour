@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaRegClock } from 'react-icons/fa';
 import { SlCalender } from 'react-icons/sl';
 import Slider from 'react-slick';
 import { useNavigate } from 'react-router-dom';
 
 import tungnath from '../../assets/Images/tungnath.jpeg';
-import badrinath from '../../assets/Images/badrinath.jpg';
-import kedarnath from '../../assets/Images/kedarnath.jpg';
+import badrinath from '../../assets/Images/badrinathnew.jfif';
+import kedarnath from '../../assets/Images/kedarnathnew.jfif';
 import kashmir from '../../assets/Images/newbanner.jpg';
 import gangotri from '../../assets/Images/gangotri.jpg'; // ✅ add Gangotri image
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TourPackage = () => {
   const navigate = useNavigate();
-
+  useEffect(() => {
+    AOS.init({ duration: 900, once: true });
+  }, []);
   const packagedata = [
     {
       image: tungnath,
@@ -78,13 +82,12 @@ const TourPackage = () => {
     <section className="lg:py-20 py-10 bg-gray-50 tour md:block hidden">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* Section Heading */}
-        <div className="text-center md:mb-16 mb-10">
+        <div className="text-center md:mb-16 mb-10" data-aos="flip-left">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Best Tour Packages <span className="text-[#00bcd4]">In India</span>
+            Best Pilgrim Tour  <span className="text-[#00bcd4]">Packages In India</span>
           </h2>
           <p className="text-gray-500 md:text-lg text-md max-w-2xl mx-auto">
-            Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo,
-            lacinia eget consectetur sed, convallis at tellus.
+            Discover thoughtfully crafted pilgrim tour packages that let you explore India’s most sacred destinations with comfort and ease.
           </p>
           <div className="mt-4 w-24 h-1 bg-[#00bcd4] mx-auto rounded-full"></div>
         </div>

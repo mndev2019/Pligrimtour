@@ -13,6 +13,8 @@ import BadrinathDetail from './Pages/PackageDetail/BadrinathDetail'
 import YamunotriDetail from './Pages/PackageDetail/YamunotriDetail'
 import KashmirDetail from './Pages/PackageDetail/KashmirDetail'
 import GangotriDetail from './Pages/PackageDetail/GangotriDetail'
+import OurGallery from './Pages/OurGallery'
+import OurBlog from './Pages/OurBlog'
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
           <Route path='/yamunotri-detail' element={<YamunotriDetail />} />
           <Route path='/kashmir-detail' element={<KashmirDetail />} />
           <Route path='/gangotri-detail' element={<GangotriDetail/>}/>
+          <Route path='/gallery' element={<OurGallery/>}/>
+          <Route path='/blog' element={<OurBlog/>}/>
 
         </Route>
 

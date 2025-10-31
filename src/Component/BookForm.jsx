@@ -14,6 +14,7 @@ const BookForm = () => {
                         <label className="block text-gray-700 font-medium mb-1">Full Name</label>
                         <input
                             type="text"
+                            required
                             placeholder="Enter your full name"
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                         />
@@ -24,6 +25,7 @@ const BookForm = () => {
                         <label className="block text-gray-700 font-medium mb-1">Email ID</label>
                         <input
                             type="email"
+                            required
                             placeholder="Enter your email"
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                         />
@@ -34,6 +36,7 @@ const BookForm = () => {
                         <label className="block text-gray-700 font-medium mb-1">Phone Number</label>
                         <input
                             type="tel"
+                            required
                             placeholder="Enter your phone number"
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                         />
@@ -46,6 +49,7 @@ const BookForm = () => {
                             <input
                                 type="number"
                                 min="1"
+                                required
                                 placeholder="Adults"
                                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                             />
@@ -55,6 +59,7 @@ const BookForm = () => {
                             <input
                                 type="number"
                                 min="0"
+                                required
                                 placeholder="Children"
                                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                             />
@@ -66,6 +71,7 @@ const BookForm = () => {
                         <label className="block text-gray-700 font-medium mb-1">Message</label>
                         <textarea
                             rows="4"
+                            required
                             placeholder="Write your message..."
                             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-[#00bcd4]"
                         ></textarea>
